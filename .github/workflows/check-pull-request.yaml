@@ -5,13 +5,13 @@ on:
     types: [opened]
 
 jobs:
-  check-pull-request:
+  check:
     name: Check PR
     runs-on: ubuntu-latest
 
     steps:
       - name: Execute action
-        uses: @SofairOfficial/github-actions/check-pull-request-action
+        uses: @binadamu-isiyoonekana/github-actions/check-pull-request-action
         with:
           pull-request-number: "${{ github.event.pull_request.number }}"
           github-token: "${{ secrets.GITHUB_TOKEN }}"
