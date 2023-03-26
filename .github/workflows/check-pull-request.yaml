@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Execute action
-        uses: binadamu-isiyoonekana/github-actions/check-pull-request-action@check-wellformed-pull-request-action
+        uses: SofairOfficial/github-actions/check-pull-request-action@check-pull-request-format-action
         with:
           pull-request-number: "${{ github.event.pull_request.number }}"
           github-token: "${{ secrets.GITHUB_TOKEN }}"
