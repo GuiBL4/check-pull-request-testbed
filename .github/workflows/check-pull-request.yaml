@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Execute action
-        uses: binadamu-isiyoonekana/github-actions/check-pull-request-action
+        uses: binadamu-isiyoonekana/github-actions/check-pull-request-action@latest
         with:
           pull-request-number: "${{ github.event.pull_request.number }}"
           github-token: "${{ secrets.GITHUB_TOKEN }}"
