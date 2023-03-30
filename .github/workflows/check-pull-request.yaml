@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - run: echo  "The job was automatically triggered in testbed."
       - name: Execute action
         uses: GuiBL4/github-actions/check-pull-request-action@check-pull-request-format-action-test
         with:
