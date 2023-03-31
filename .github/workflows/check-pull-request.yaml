@@ -17,3 +17,10 @@ jobs:
           pull-request-number: "${{ github.event.pull_request.number }}"
           github-token: "${{ secrets.GITHUB_TOKEN }}"
           pull-request-label: "${{ github.event.*.labels.*.name }}"
+          
+      - if: "${{ contains(github.event.*.labels.*.name, 'status: in progress') }}"
+        name: check for label
+        run: |
+          echo "Pull request is labeled as 'Do Not Merge'"
+          echo "This workflow fails so that the pull request cannot be merged"
+          exit 1
