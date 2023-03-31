@@ -1,4 +1,4 @@
-name: Do Not Merge
+name: Check label in-progress to prevent merging
 
 on:
   pull_request_target:
@@ -7,7 +7,7 @@ on:
 jobs:
   do-not-merge:
     if: "${{ contains(github.event.*.labels.*.name, 'status: in progress') }}"
-    name: Check Do Not Merge
+    name: Check do not merge
     runs-on: ubuntu-latest
     steps:
       - name: check for label
