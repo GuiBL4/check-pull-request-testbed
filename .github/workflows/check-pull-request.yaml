@@ -12,7 +12,7 @@ jobs:
     steps:
       - run: echo  "The job was automatically triggered in testbed."
       - name: Execute action
-        uses: GuiBL4/github-actions/check-pull-request-action@check-pull-request-format-action-test
+        uses: GuiBL4/github-actions/check-pull-request-action@check-pull-request-format-action
         with:
           pull-request-number: "${{ github.event.pull_request.number }}"
           github-token: "${{ secrets.GITHUB_TOKEN }}"
