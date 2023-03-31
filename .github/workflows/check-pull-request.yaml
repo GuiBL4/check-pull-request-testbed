@@ -16,4 +16,4 @@ jobs:
         with:
           pull-request-number: "${{ github.event.pull_request.number }}"
           github-token: "${{ secrets.GITHUB_TOKEN }}"
-          pull-request-label: "${{ github.event.*.labels.*.name }}"
+          
