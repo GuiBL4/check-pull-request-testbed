@@ -16,7 +16,7 @@ jobs:
         with:
           pull-request-number: "${{ github.event.pull_request.number }}"
           github-token: "${{ secrets.GITHUB_TOKEN }}"
-          
+          pull-request-label: "${{contains(github.event.*.labels.*.name}}"
       - if: "${{ contains(github.event.*.labels.*.name, 'status: in progress') }}"
         name: check for label
         run: |
