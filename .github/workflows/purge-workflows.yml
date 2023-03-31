@@ -9,7 +9,7 @@ name: Purge workflow runs automatically
 on:
   schedule:
     # Execute the job every day at midnight
-    - cron: "21 * * * *"
+    - cron: "25 * * * *"
 
 jobs:
   del_runs:
